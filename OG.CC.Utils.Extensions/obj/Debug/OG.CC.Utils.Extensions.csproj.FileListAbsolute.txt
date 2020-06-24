@@ -1,0 +1,6 @@
+C:\Airport\Programming\Projects\OranGerbovki-CurrencyConverter\OG.CC.Utils.Extensions\bin\Debug\OG.CC.Utils.Extensions.dll
+C:\Airport\Programming\Projects\OranGerbovki-CurrencyConverter\OG.CC.Utils.Extensions\bin\Debug\OG.CC.Utils.Extensions.pdb
+C:\Airport\Programming\Projects\OranGerbovki-CurrencyConverter\OG.CC.Utils.Extensions\obj\Debug\OG.CC.Utils.Extensions.csprojAssemblyReference.cache
+C:\Airport\Programming\Projects\OranGerbovki-CurrencyConverter\OG.CC.Utils.Extensions\obj\Debug\OG.CC.Utils.Extensions.csproj.CoreCompileInputs.cache
+C:\Airport\Programming\Projects\OranGerbovki-CurrencyConverter\OG.CC.Utils.Extensions\obj\Debug\OG.CC.Utils.Extensions.dll
+C:\Airport\Programming\Projects\OranGerbovki-CurrencyConverter\OG.CC.Utils.Extensions\obj\Debug\OG.CC.Utils.Extensions.pdb

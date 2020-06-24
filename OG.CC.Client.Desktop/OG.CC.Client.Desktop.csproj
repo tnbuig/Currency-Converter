@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1FA8EA1E-D71E-4721-A9B7-6C343BEBF18F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OG.CC.Client.Desktop</RootNamespace>
+    <AssemblyName>OG.CC.Client.Desktop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.2.0.2\lib\net47\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="GongSolutions.WPF.DragDrop, Version=2.0.0.0, Culture=neutral, PublicKeyToken=91f1945125b7a587, processorArchitecture=MSIL">
+      <HintPath>..\packages\gong-wpf-dragdrop.2.2.0\lib\net47\GongSolutions.WPF.DragDrop.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Unity.Abstractions, Version=5.11.6.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.11.7\lib\net47\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.11.8.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.11.7\lib\net47\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="WeakEvent, Version=4.0.0.0, Culture=neutral, PublicKeyToken=274c1a48cbbd909f, processorArchitecture=MSIL">
+      <HintPath>..\packages\ThomasLevesque.WeakEvent.4.1.0\lib\net45\WeakEvent.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=3.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.8.1\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=3.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.8.1\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=3.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.8.1\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=3.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.8.1\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=3.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.8.1\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Bootstrapper\BootStrapperLoader.cs" />
+    <Compile Include="Bootstrapper\UnityServiceLocator.cs" />
+    <Compile Include="Messages\CurrencyRemovedMessage.cs" />
+    <Compile Include="Messages\CurrencyAddedMessage.cs" />
+    <Compile Include="Model\Currency.cs" />
+    <Compile Include="Model\CurrencyManager.cs" />
+    <Compile Include="Model\ICurrencyManager.cs" />
+    <Compile Include="Model\IPersistencyManager.cs" />
+    <Compile Include="Model\PersistencyManager.cs" />
+    <Compile Include="Messages\AmountChangedMessage.cs" />
+    <Compile Include="Messages\RatesChangedEventArgs.cs" />
+    <Compile Include="ViewModels\CurrencyViewModel.cs" />
+    <Compile Include="ViewModels\CurrencySelectionViewModel.cs" />
+    <Compile Include="ViewModels\InputViewModel.cs" />
+    <Compile Include="ViewModels\OutputViewModel.cs" />
+    <Compile Include="ViewModelLocator.cs" />
+    <Compile Include="Views\CurrencySelectionView.xaml.cs">
+      <DependentUpon>CurrencySelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CurrencyValueView.xaml.cs">
+      <DependentUpon>CurrencyValueView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InputView.xaml.cs">
+      <DependentUpon>InputView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OutputView.xaml.cs">
+      <DependentUpon>OutputView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Resources\Style.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CurrencySelectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CurrencyValueView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InputView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OutputView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\ApplicationIcon.ico" />
+    <Resource Include="Resources\Images\Flags\AED.png" />
+    <Resource Include="Resources\Images\Flags\AFN.png" />
+    <Resource Include="Resources\Images\Flags\ALL.png" />
+    <Resource Include="Resources\Images\Flags\AMD.png" />
+    <Resource Include="Resources\Images\Flags\ANG.png" />
+    <Resource Include="Resources\Images\Flags\AOA.png" />
+    <Resource Include="Resources\Images\Flags\ARS.png" />
+    <Resource Include="Resources\Images\Flags\ATS.png" />
+    <Resource Include="Resources\Images\Flags\AUD.png" />
+    <Resource Include="Resources\Images\Flags\AWG.png" />
+    <Resource Include="Resources\Images\Flags\AZN.png" />
+    <Resource Include="Resources\Images\Flags\BAM.png" />
+    <Resource Include="Resources\Images\Flags\BBD.png" />
+    <Resource Include="Resources\Images\Flags\BDT.png" />
+    <Resource Include="Resources\Images\Flags\BEF.png" />
+    <Resource Include="Resources\Images\Flags\BGN.png" />
+    <Resource Include="Resources\Images\Flags\BHD.png" />
+    <Resource Include="Resources\Images\Flags\BIF.png" />
+    <Resource Include="Resources\Images\Flags\CAD.png" />
+    <Resource Include="Resources\Images\Flags\CDF.png" />
+    <Resource Include="Resources\Images\Flags\CHF.png" />
+    <Resource Include="Resources\Images\Flags\CNY.png" />
+    <Resource Include="Resources\Images\Flags\CZK.png" />
+    <Resource Include="Resources\Images\Flags\DEM.png" />
+    <Resource Include="Resources\Images\Flags\DJF.png" />
+    <Resource Include="Resources\Images\Flags\DKK.png" />
+    <Resource Include="Resources\Images\Flags\DOP.png" />
+    <Resource Include="Resources\Images\Flags\DZD.png" />
+    <Resource Include="Resources\Images\Flags\EEK.png" />
+    <Resource Include="Resources\Images\Flags\EUR.png" />
+    <Resource Include="Resources\Images\Flags\FJD.png" />
+    <Resource Include="Resources\Images\Flags\FKP.png" />
+    <Resource Include="Resources\Images\Flags\FRF.png" />
+    <Resource Include="Resources\Images\Flags\GBP.png" />
+    <Resource Include="Resources\Images\Flags\GEL.png" />
+    <Resource Include="Resources\Images\Flags\GGP.png" />
+    <Resource Include="Resources\Images\Flags\GHS.png" />
+    <Resource Include="Resources\Images\Flags\GIP.png" />
+    <Resource Include="Resources\Images\Flags\GMD.png" />
+    <Resource Include="Resources\Images\Flags\GNF.png" />
+    <Resource Include="Resources\Images\Flags\GRD.png" />
+    <Resource Include="Resources\Images\Flags\HTG.png" />
+    <Resource Include="Resources\Images\Flags\HUF.png" />
+    <Resource Include="Resources\Images\Flags\IDR.png" />
+    <Resource Include="Resources\Images\Flags\IEP.png" />
+    <Resource Include="Resources\Images\Flags\ILS.png" />
+    <Resource Include="Resources\Images\Flags\IMP.png" />
+    <Resource Include="Resources\Images\Flags\INR.png" />
+    <Resource Include="Resources\Images\Flags\IQD.png" />
+    <Resource Include="Resources\Images\Flags\IRR.png" />
+    <Resource Include="Resources\Images\Flags\ISK.png" />
+    <Resource Include="Resources\Images\Flags\ITL.png" />
+    <Resource Include="Resources\Images\Flags\JEP.png" />
+    <Resource Include="Resources\Images\Flags\JMD.png" />
+    <Resource Include="Resources\Images\Flags\JOD.png" />
+    <Resource Include="Resources\Images\Flags\JPY.png" />
+    <Resource Include="Resources\Images\Flags\KES.png" />
+    <Resource Include="Resources\Images\Flags\KGS.png" />
+    <Resource Include="Resources\Images\Flags\KHR.png" />
+    <Resource Include="Resources\Images\Flags\KMF.png" />
+    <Resource Include="Resources\Images\Flags\KPW.png" />
+    <Resource Include="Resources\Images\Flags\KRW.png" />
+    <Resource Include="Resources\Images\Flags\KWD.png" />
+    <Resource Include="Resources\Images\Flags\KYD.png" />
+    <Resource Include="Resources\Images\Flags\KZT.png" />
+    <Resource Include="Resources\Images\Flags\LAK.png" />
+    <Resource Include="Resources\Images\Flags\LBP.png" />
+    <Resource Include="Resources\Images\Flags\LKR.png" />
+    <Resource Include="Resources\Images\Flags\LRD.png" />
+    <Resource Include="Resources\Images\Flags\LSL.png" />
+    <Resource Include="Resources\Images\Flags\LTL.png" />
+    <Resource Include="Resources\Images\Flags\LUF.png" />
+    <Resource Include="Resources\Images\Flags\LVL.png" />
+    <Resource Include="Resources\Images\Flags\LYD.png" />
+    <Resource Include="Resources\Images\Flags\MAD.png" />
+    <Resource Include="Resources\Images\Flags\MDL.png" />
+    <Resource Include="Resources\Images\Flags\MGA.png" />
+    <Resource Include="Resources\Images\Flags\MGF.png" />
+    <Resource Include="Resources\Images\Flags\MKD.png" />
+    <Resource Include="Resources\Images\Flags\MMK.png" />
+    <Resource Include="Resources\Images\Flags\MNT.png" />
+    <Resource Include="Resources\Images\Flags\MOP.png" />
+    <Resource Include="Resources\Images\Flags\MRO.png" />
+    <Resource Include="Resources\Images\Flags\USD.png" />
+    <Resource Include="Resources\Images\Flags\UYU.png" />
+    <Resource Include="Resources\Images\Flags\UZS.png" />
+    <Resource Include="Resources\Images\Flags\VEB.png" />
+    <Resource Include="Resources\Images\Flags\VEF.png" />
+    <Resource Include="Resources\Images\Flags\VND.png" />
+    <Resource Include="Resources\Images\Flags\VUV.png" />
+    <Resource Include="Resources\Images\Flags\WST.png" />
+    <Resource Include="Resources\Images\Flags\XAF.png" />
+    <Resource Include="Resources\Images\Flags\XAG.png" />
+    <Resource Include="Resources\Images\Flags\XAU.png" />
+    <Resource Include="Resources\Images\Flags\XBT.png" />
+    <Resource Include="Resources\Images\Flags\XCD.png" />
+    <Resource Include="Resources\Images\Flags\XDR.png" />
+    <Resource Include="Resources\Images\Flags\XOF.png" />
+    <Resource Include="Resources\Images\Flags\XPD.png" />
+    <Resource Include="Resources\Images\Flags\XPF.png" />
+    <Resource Include="Resources\Images\Flags\XPT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OG.CC.Logic.Services\OG.CC.Logic.Services.csproj">
+      <Project>{D3AE9F87-CD25-4AA8-84D3-193C06566BC6}</Project>
+      <Name>OG.CC.Logic.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OG.CC.Utils.Extensions\OG.CC.Utils.Extensions.csproj">
+      <Project>{a7a51966-eea1-4938-ae93-979806db31ba}</Project>
+      <Name>OG.CC.Utils.Extensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Flags\BMD.png" />
+    <Resource Include="Resources\Images\Flags\BND.png" />
+    <Resource Include="Resources\Images\Flags\BOB.png" />
+    <Resource Include="Resources\Images\Flags\BRL.png" />
+    <Resource Include="Resources\Images\Flags\BSD.png" />
+    <Resource Include="Resources\Images\Flags\BTN.png" />
+    <Resource Include="Resources\Images\Flags\BWP.png" />
+    <Resource Include="Resources\Images\Flags\BYR.png" />
+    <Resource Include="Resources\Images\Flags\BZD.png" />
+    <Resource Include="Resources\Images\Flags\CLP.png" />
+    <Resource Include="Resources\Images\Flags\COP.png" />
+    <Resource Include="Resources\Images\Flags\CRC.png" />
+    <Resource Include="Resources\Images\Flags\CUC.png" />
+    <Resource Include="Resources\Images\Flags\CUP.png" />
+    <Resource Include="Resources\Images\Flags\CVE.png" />
+    <Resource Include="Resources\Images\Flags\CYP.png" />
+    <Resource Include="Resources\Images\Flags\EGP.png" />
+    <Resource Include="Resources\Images\Flags\ERN.png" />
+    <Resource Include="Resources\Images\Flags\ESP.png" />
+    <Resource Include="Resources\Images\Flags\ETB.png" />
+    <Resource Include="Resources\Images\Flags\FIM.png" />
+    <Resource Include="Resources\Images\Flags\GTQ.png" />
+    <Resource Include="Resources\Images\Flags\GYD.png" />
+    <Resource Include="Resources\Images\Flags\HKD.png" />
+    <Resource Include="Resources\Images\Flags\HNL.png" />
+    <Resource Include="Resources\Images\Flags\HRK.png" />
+    <Resource Include="Resources\Images\Flags\MTL.png" />
+    <Resource Include="Resources\Images\Flags\MUR.png" />
+    <Resource Include="Resources\Images\Flags\MVR.png" />
+    <Resource Include="Resources\Images\Flags\MWK.png" />
+    <Resource Include="Resources\Images\Flags\MXN.png" />
+    <Resource Include="Resources\Images\Flags\MYR.png" />
+    <Resource Include="Resources\Images\Flags\MZN.png" />
+    <Resource Include="Resources\Images\Flags\NAD.png" />
+    <Resource Include="Resources\Images\Flags\NGN.png" />
+    <Resource Include="Resources\Images\Flags\NIO.png" />
+    <Resource Include="Resources\Images\Flags\NLG.png" />
+    <Resource Include="Resources\Images\Flags\NOK.png" />
+    <Resource Include="Resources\Images\Flags\NPR.png" />
+    <Resource Include="Resources\Images\Flags\NZD.png" />
+    <Resource Include="Resources\Images\Flags\OMR.png" />
+    <Resource Include="Resources\Images\Flags\PAB.png" />
+    <Resource Include="Resources\Images\Flags\PEN.png" />
+    <Resource Include="Resources\Images\Flags\PGK.png" />
+    <Resource Include="Resources\Images\Flags\PHP.png" />
+    <Resource Include="Resources\Images\Flags\PKR.png" />
+    <Resource Include="Resources\Images\Flags\PLN.png" />
+    <Resource Include="Resources\Images\Flags\PTE.png" />
+    <Resource Include="Resources\Images\Flags\PYG.png" />
+    <Resource Include="Resources\Images\Flags\QAR.png" />
+    <Resource Include="Resources\Images\Flags\RON.png" />
+    <Resource Include="Resources\Images\Flags\RSD.png" />
+    <Resource Include="Resources\Images\Flags\RUB.png" />
+    <Resource Include="Resources\Images\Flags\RWF.png" />
+    <Resource Include="Resources\Images\Flags\SAR.png" />
+    <Resource Include="Resources\Images\Flags\SBD.png" />
+    <Resource Include="Resources\Images\Flags\SCR.png" />
+    <Resource Include="Resources\Images\Flags\SDG.png" />
+    <Resource Include="Resources\Images\Flags\SEK.png" />
+    <Resource Include="Resources\Images\Flags\SGD.png" />
+    <Resource Include="Resources\Images\Flags\SHP.png" />
+    <Resource Include="Resources\Images\Flags\SIT.png" />
+    <Resource Include="Resources\Images\Flags\SKK.png" />
+    <Resource Include="Resources\Images\Flags\SLL.png" />
+    <Resource Include="Resources\Images\Flags\SOS.png" />
+    <Resource Include="Resources\Images\Flags\SPL.png" />
+    <Resource Include="Resources\Images\Flags\SRD.png" />
+    <Resource Include="Resources\Images\Flags\STD.png" />
+    <Resource Include="Resources\Images\Flags\SVC.png" />
+    <Resource Include="Resources\Images\Flags\SYP.png" />
+    <Resource Include="Resources\Images\Flags\SZL.png" />
+    <Resource Include="Resources\Images\Flags\THB.png" />
+    <Resource Include="Resources\Images\Flags\TJS.png" />
+    <Resource Include="Resources\Images\Flags\TMT.png" />
+    <Resource Include="Resources\Images\Flags\TND.png" />
+    <Resource Include="Resources\Images\Flags\TOP.png" />
+    <Resource Include="Resources\Images\Flags\TRY.png" />
+    <Resource Include="Resources\Images\Flags\TTD.png" />
+    <Resource Include="Resources\Images\Flags\TVD.png" />
+    <Resource Include="Resources\Images\Flags\TWD.png" />
+    <Resource Include="Resources\Images\Flags\UAH.png" />
+    <Resource Include="Resources\Images\Flags\UGX.png" />
+    <Resource Include="Resources\Images\Flags\YER.png" />
+    <Resource Include="Resources\Images\Flags\ZAR.png" />
+    <Resource Include="Resources\Images\Flags\ZMK.png" />
+    <Resource Include="Resources\Images\Flags\ZMW.png" />
+    <Resource Include="Resources\Images\Flags\ZWD.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
